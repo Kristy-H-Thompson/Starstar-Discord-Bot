@@ -3,14 +3,6 @@ import datetime
 import wikipedia
 import pandas
 import webbrowser 
-#Everything above this is just importing things you need
-
-### I removed a lot of the speech stuff in here since we decided it won't work
-### for Discord.... but I kept the original file (Try#2) so we can still run
-### talking Starstar on desktop, and maybe someday we'll figure out how to
-### do it on Discord too!
-
-
 
 solsticeclancats = pandas.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vREzwVYgNn9fMWkbWZkBjfR7wyq8cJZHhNJZNsZwl7q9I74dd2wcnHI1L7pp0cZ3efWyI288pxI938P/pub?output=csv')
 mecheartcats = pandas.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vRH1ffZviTAzoOy9SqErVR2GmAydqPwSTcZHcOZH8bR9RKcPnPeQ_c7GNTYElCVKkYRJXM32KjBxwE-/pub?output=csv')
@@ -37,7 +29,6 @@ def findsccharacter(command):
     sccharacter = solsticeclancats[solsticeclancats['Character Name'] == command.capitalize()]['Character Name']
     sccharacterdescription = solsticeclancats[solsticeclancats['Character Name'] == command.capitalize()]['Physical Description (one sentence long)']
     return(sccharacter.iloc[0], sccharacterdescription.iloc[0])
-
 
 
 def talk(command):
